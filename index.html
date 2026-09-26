@@ -4,201 +4,205 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My App - Download APK</title>
+<title>My App - Official APK</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
     min-height:100vh;
-    background:#f5f7fb;
-    color:#111827;
 }
 
-/* Header */
 header{
-    height:64px;
-    background:#ffffff;
-    border-bottom:1px solid #e5e7eb;
+    height:68px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 20px;
+    padding:0 22px;
+    border-bottom:1px solid #202020;
+    background:#0b0b0b;
     position:sticky;
     top:0;
-    z-index:10;
+    z-index:100;
 }
 
-.logo{
+.brand{
     display:flex;
     align-items:center;
-    gap:10px;
-    font-size:20px;
+    gap:11px;
+    font-size:19px;
     font-weight:700;
 }
 
-.logo-icon{
+.brand-icon{
     width:38px;
     height:38px;
-    border-radius:10px;
-    background:#111827;
-    color:white;
+    border-radius:11px;
+    background:#fff;
+    color:#000;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:18px;
+    font-weight:900;
 }
 
-.header-btn{
+.header-link{
+    color:#aaa;
     text-decoration:none;
-    color:#111827;
     font-size:14px;
-    font-weight:600;
 }
 
-/* Main */
 .container{
     width:100%;
     max-width:900px;
     margin:auto;
-    padding:55px 18px;
+    padding:45px 16px;
 }
 
 .hero{
-    background:white;
-    border-radius:24px;
-    padding:45px 25px;
     text-align:center;
-    box-shadow:0 10px 35px rgba(0,0,0,0.06);
+    padding:45px 20px 40px;
+    border:1px solid #222;
+    border-radius:25px;
+    background:linear-gradient(145deg,#111,#090909);
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
 .app-icon{
     width:110px;
     height:110px;
-    margin:0 auto 20px;
-    border-radius:25px;
+    border-radius:26px;
     object-fit:cover;
-    background:#e5e7eb;
+    margin:0 auto 22px;
+    background:#1d1d1d;
     display:block;
 }
 
+.app-icon.hidden{
+    display:none;
+}
+
 h1{
-    font-size:34px;
+    font-size:36px;
     margin-bottom:10px;
 }
 
 .subtitle{
-    color:#6b7280;
-    font-size:16px;
-    line-height:1.6;
-    max-width:600px;
+    color:#999;
+    max-width:580px;
     margin:auto;
+    line-height:1.6;
+    font-size:15px;
 }
 
-/* Download */
-.download-box{
-    margin:30px auto 0;
+.version{
+    display:inline-block;
+    margin-top:18px;
+    padding:7px 13px;
+    border:1px solid #292929;
+    border-radius:30px;
+    color:#aaa;
+    font-size:12px;
+}
+
+.download-area{
     max-width:420px;
+    margin:28px auto 0;
 }
 
 .download-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
     width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
     padding:17px 20px;
     border-radius:14px;
-    background:#111827;
-    color:white;
+    background:#fff;
+    color:#000;
     text-decoration:none;
     font-size:17px;
     font-weight:700;
-    transition:0.2s;
+    transition:.2s;
 }
 
 .download-btn:hover{
     transform:translateY(-2px);
-    background:#000000;
+    box-shadow:0 10px 30px rgba(255,255,255,.12);
+}
+
+.download-btn:active{
+    transform:scale(.98);
 }
 
 .download-info{
     display:flex;
     justify-content:center;
-    gap:15px;
+    gap:12px;
     margin-top:12px;
-    color:#6b7280;
-    font-size:13px;
+    color:#666;
+    font-size:12px;
 }
 
-/* Version */
-.version{
-    margin-top:20px;
-    display:inline-block;
-    padding:7px 13px;
-    background:#f3f4f6;
-    border-radius:30px;
-    font-size:13px;
-    color:#4b5563;
-}
-
-/* Features */
 .section{
-    margin-top:25px;
-    background:white;
+    margin-top:20px;
+    padding:25px 22px;
+    border:1px solid #202020;
     border-radius:20px;
-    padding:28px 22px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.04);
+    background:#0d0d0d;
 }
 
 .section h2{
-    font-size:21px;
+    font-size:20px;
     margin-bottom:18px;
 }
 
 .features{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:15px;
+    gap:13px;
 }
 
 .feature{
-    padding:18px;
-    background:#f8fafc;
+    background:#141414;
+    border:1px solid #202020;
     border-radius:15px;
+    padding:18px;
 }
 
 .feature-icon{
-    font-size:25px;
-    margin-bottom:10px;
+    font-size:23px;
+    margin-bottom:12px;
 }
 
 .feature h3{
-    font-size:15px;
-    margin-bottom:6px;
+    font-size:14px;
+    margin-bottom:7px;
 }
 
 .feature p{
-    font-size:13px;
-    color:#6b7280;
+    color:#888;
+    font-size:12px;
     line-height:1.5;
 }
 
-/* Changelog */
 .changelog{
     list-style:none;
 }
 
 .changelog li{
-    padding:13px 0;
-    border-bottom:1px solid #eee;
+    padding:12px 0;
+    border-bottom:1px solid #202020;
+    color:#999;
     font-size:14px;
-    color:#4b5563;
+    line-height:1.5;
 }
 
 .changelog li:last-child{
@@ -206,85 +210,92 @@ h1{
 }
 
 .changelog strong{
-    color:#111827;
+    color:#fff;
 }
 
-/* Install */
 .steps{
     display:flex;
     flex-direction:column;
-    gap:14px;
+    gap:15px;
 }
 
 .step{
     display:flex;
-    align-items:flex-start;
     gap:13px;
+    align-items:flex-start;
 }
 
-.step-number{
-    min-width:30px;
+.number{
+    width:30px;
     height:30px;
+    min-width:30px;
     border-radius:50%;
-    background:#111827;
-    color:white;
+    background:#fff;
+    color:#000;
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:13px;
-    font-weight:bold;
+    font-weight:700;
 }
 
 .step-text{
+    color:#999;
     font-size:14px;
     line-height:1.5;
-    color:#4b5563;
+    padding-top:5px;
 }
 
-/* Footer */
 footer{
     text-align:center;
     padding:35px 15px;
-    color:#9ca3af;
-    font-size:13px;
+    color:#555;
+    font-size:12px;
 }
 
-footer a{
-    color:#6b7280;
-    text-decoration:none;
-}
-
-/* Mobile */
 @media(max-width:650px){
 
+    header{
+        padding:0 15px;
+    }
+
+    .brand{
+        font-size:16px;
+    }
+
+    .header-link{
+        font-size:12px;
+    }
+
     .container{
-        padding:30px 12px;
+        padding:25px 12px;
     }
 
     .hero{
-        padding:35px 18px;
+        padding:35px 17px;
         border-radius:20px;
     }
 
     h1{
-        font-size:28px;
+        font-size:29px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+
+    .app-icon{
+        width:95px;
+        height:95px;
+        border-radius:23px;
     }
 
     .features{
         grid-template-columns:1fr;
     }
 
-    header{
-        padding:0 14px;
-    }
-
-    .logo{
-        font-size:17px;
-    }
-
-    .app-icon{
-        width:95px;
-        height:95px;
+    .section{
+        padding:22px 17px;
     }
 }
 </style>
@@ -294,13 +305,13 @@ footer a{
 
 <header>
 
-    <div class="logo">
-        <div class="logo-icon">A</div>
+    <div class="brand">
+        <div class="brand-icon">A</div>
         <span>My App</span>
     </div>
 
-    <a class="header-btn" href="#install">
-        How to Install
+    <a href="#install" class="header-link">
+        Install Guide
     </a>
 
 </header>
@@ -308,55 +319,53 @@ footer a{
 
 <main class="container">
 
-    <!-- HERO -->
+    <!-- MAIN APP AREA -->
 
     <section class="hero">
 
         <!--
-        Apne app ka logo lagane ke liye:
-        app-icon.png ko same folder mein rakho
+        Agar app-icon.png repository mein hai
+        to automatically show hoga.
         -->
 
         <img
-            src="app-icon.png"
+            src="./app-icon.png"
             class="app-icon"
-            alt="App Icon"
-            onerror="this.style.display='none';"
+            id="appIcon"
+            alt="My App"
         >
 
         <h1>My App</h1>
 
         <p class="subtitle">
-            Download the latest official Android APK directly from
-            the official website.
+            Download the latest official Android APK directly
+            from the official website.
         </p>
 
-        <span class="version">
-            Latest Version 1.0.0
-        </span>
+        <div class="version">
+            Version 1.0.0
+        </div>
 
-
-        <div class="download-box">
+        <div class="download-area">
 
             <!--
             IMPORTANT:
-            YAHAN APNE APK KI REAL LINK DALO
+            APK ka naam MyApp.apk hona chahiye.
             -->
 
             <a
+                href="./MyApp.apk"
                 class="download-btn"
-                href="https://example.com/MyApp.apk"
-                download
+                download="MyApp.apk"
             >
-                ↓ &nbsp; Download APK
+                <span>↓</span>
+                <span>Download APK</span>
             </a>
 
             <div class="download-info">
                 <span>Android</span>
                 <span>•</span>
-                <span>25 MB</span>
-                <span>•</span>
-                <span>v1.0.0</span>
+                <span>MyApp.apk</span>
             </div>
 
         </div>
@@ -368,7 +377,7 @@ footer a{
 
     <section class="section">
 
-        <h2>App Features</h2>
+        <h2>Features</h2>
 
         <div class="features">
 
@@ -376,15 +385,15 @@ footer a{
                 <div class="feature-icon">⚡</div>
                 <h3>Fast</h3>
                 <p>
-                    Lightweight and optimized for fast performance.
+                    Lightweight interface with fast performance.
                 </p>
             </div>
 
             <div class="feature">
                 <div class="feature-icon">🔒</div>
-                <h3>Secure</h3>
+                <h3>Official</h3>
                 <p>
-                    Download the APK directly from the official source.
+                    Download the APK directly from this website.
                 </p>
             </div>
 
@@ -392,7 +401,7 @@ footer a{
                 <div class="feature-icon">📱</div>
                 <h3>Android</h3>
                 <p>
-                    Designed for Android smartphones and tablets.
+                    Built for Android smartphones and devices.
                 </p>
             </div>
 
@@ -401,7 +410,7 @@ footer a{
     </section>
 
 
-    <!-- CHANGELOG -->
+    <!-- WHAT'S NEW -->
 
     <section class="section">
 
@@ -410,8 +419,7 @@ footer a{
         <ul class="changelog">
 
             <li>
-                <strong>v1.0.0</strong> —
-                Initial release
+                <strong>v1.0.0</strong> — Initial release
             </li>
 
             <li>
@@ -419,7 +427,7 @@ footer a{
             </li>
 
             <li>
-                Fixed minor bugs
+                Minor bug fixes
             </li>
 
         </ul>
@@ -427,7 +435,7 @@ footer a{
     </section>
 
 
-    <!-- INSTALLATION -->
+    <!-- INSTALL GUIDE -->
 
     <section class="section" id="install">
 
@@ -436,47 +444,39 @@ footer a{
         <div class="steps">
 
             <div class="step">
-
-                <div class="step-number">1</div>
-
+                <div class="number">1</div>
                 <div class="step-text">
-                    Download the APK using the Download APK button.
+                    Tap the <b>Download APK</b> button.
                 </div>
-
             </div>
 
-
             <div class="step">
-
-                <div class="step-number">2</div>
-
+                <div class="number">2</div>
                 <div class="step-text">
-                    Open the downloaded APK file from your phone.
+                    Wait for the APK download to finish.
                 </div>
-
             </div>
 
-
             <div class="step">
-
-                <div class="step-number">3</div>
-
+                <div class="number">3</div>
                 <div class="step-text">
-                    If Android asks for permission to install from
-                    this source, allow it in your phone settings.
+                    Open <b>MyApp.apk</b> from your Downloads folder.
                 </div>
-
             </div>
 
+            <div class="step">
+                <div class="number">4</div>
+                <div class="step-text">
+                    Allow installation from this source if Android
+                    asks for permission.
+                </div>
+            </div>
 
             <div class="step">
-
-                <div class="step-number">4</div>
-
+                <div class="number">5</div>
                 <div class="step-text">
-                    Tap Install and open the app.
+                    Tap <b>Install</b> and open the app.
                 </div>
-
             </div>
 
         </div>
@@ -487,51 +487,47 @@ footer a{
 
 
 <footer>
-
-    © 2026 My App. All rights reserved.
-    <br><br>
-
-    <a href="#">
-        Privacy Policy
-    </a>
-
-    &nbsp; • &nbsp;
-
-    <a href="#">
-        Contact
-    </a>
-
+    © 2026 My App
 </footer>
 
 
 <script>
 
 /*
-==================================================
-APP SETTINGS
-==================================================
+==========================================
+APP ICON FALLBACK
+==========================================
 
-Agar future mein version change karna ho,
-to HTML mein manually update kar sakte ho.
-
-Example:
-
-1.0.0 → 1.1.0
-
-APK link bhi update karna hoga.
-==================================================
+Agar app-icon.png nahi mila,
+to broken image icon nahi dikhega.
 */
 
+const icon = document.getElementById("appIcon");
 
-// Download button click tracking
-const downloadButton = document.querySelector(".download-btn");
+icon.addEventListener("error", function(){
 
-downloadButton.addEventListener("click", function(){
-
-    console.log("APK download started");
+    this.classList.add("hidden");
 
 });
 
+
+/*
+==========================================
+DOWNLOAD CHECK
+==========================================
+
+Button click hone par console mein
+download information show hogi.
+*/
+
+const downloadButton =
+    document.querySelector(".download-btn");
+
+downloadButton.addEventListener("click", function(){
+
+    console.log("MyApp.apk download started.");
+
+});
 
 </script>
 
